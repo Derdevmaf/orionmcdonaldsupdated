@@ -69,11 +69,18 @@ export default function Home() {
         
         {/* Main Banner Slideshow (MéquiZap) - Before "Pré - Venda Stranger Things" */}
         <div className="mb-6">
-          <Slideshow 
-            images={mainBannerImages}
-            interval={3000}
-            aspectRatio="4/3"
-          />
+          <a 
+            href="https://wa.me/54991997708?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20com%20retirada%20pelo%20M%C3%A9quilocker"
+            target="_blank"        
+            rel="noopener noreferrer" 
+            style={{ display: 'block' }} 
+          >
+            <Slideshow 
+              images={mainBannerImages}
+              interval={3000}
+              aspectRatio="4/3"
+            />
+          </a>  
         </div>
         
         {/* Stranger Things Section */}
