@@ -26,13 +26,19 @@ export default function Home() {
       <div className="px-4 mt-4">
         {/* McLocker Banner */}
         <div className="bg-[#F3E5F5] rounded-2xl p-4 flex items-center justify-between mb-6 relative overflow-hidden">
-          <div className="flex-1 z-10">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="bg-[#7B3FF2] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Novo</span>
-              <h3 className="font-bold text-sm text-black leading-tight">Faça seu pedido e use o novo McLocker</h3>
+          
+          <a href="https://wa.me/54991997708?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20com%20retirada%20pelo%20M%C3%A9quilocker"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-1 z-10">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="bg-[#7B3FF2] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Novo</span>
+                <h3 className="font-bold text-sm text-black leading-tight">Faça seu pedido e use o novo McLocker</h3>
+              </div>
+              <p className="text-xs text-gray-600 font-medium">20%OFF na primeira compra</p>
             </div>
-            <p className="text-xs text-gray-600 font-medium">20%OFF na primeira compra</p>
-          </div>
+          </a>
           <ChevronRight size={16} className="text-gray-400" />
         </div>
         
@@ -69,11 +75,18 @@ export default function Home() {
         
         {/* Main Banner Slideshow (MéquiZap) - Before "Pré - Venda Stranger Things" */}
         <div className="mb-6">
-          <Slideshow 
-            images={mainBannerImages}
-            interval={3000}
-            aspectRatio="4/3"
-          />
+          <a 
+            href="https://wa.me/54991997708?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20com%20retirada%20pelo%20M%C3%A9quilocker"
+            target="_blank"        
+            rel="noopener noreferrer" 
+            style={{ display: 'block' }} 
+          >
+            <Slideshow 
+              images={mainBannerImages}
+              interval={3000}
+              aspectRatio="4/3"
+            />
+          </a>  
         </div>
         
         {/* Stranger Things Section */}
