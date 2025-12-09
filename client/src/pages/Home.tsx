@@ -7,9 +7,7 @@ import { Link } from "wouter";
 export default function Home() {
   // Images for the main banner slideshow (before "Pré - Venda Stranger Things")
   const mainBannerImages = [
-    "/images/banner-novidade.png",
-    "/images/banner-mequizap.png",
-    "/images/banner-lockers.png",
+    "/images/banner-mequizap.png"
   ];
 
   // Images for the secondary banner slideshow (before "Para Você")
@@ -228,8 +226,8 @@ export default function Home() {
         <Link href="/tracking">
           <div className="bg-[#1A1A1A] text-white rounded-full py-3 px-6 flex items-center justify-between shadow-lg cursor-pointer">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-[#E35205] rounded-lg flex items-center justify-center">
-                <img src="/images/icon-burger-small.png" alt="" className="w-5 h-5 object-contain" />
+              <div className="w-8 h-8 bg-[#1A1A1A] rounded-lg flex items-center justify-center">
+                <img src="/images/icon-burger-small.png" alt="" className="w-8 h-8 object-contain" />
               </div>
               <span className="font-bold text-sm">Acompanhar seu pedido</span>
             </div>

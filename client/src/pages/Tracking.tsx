@@ -1,8 +1,21 @@
 import { BottomNavigation } from "@/components/BottomNavigation";
+import { Slideshow } from "@/components/Slideshow"; // Importar Slideshow
 import { ArrowLeft, MapPin, Signal, Wifi, Battery } from "lucide-react";
 import { Link } from "wouter";
 
+// Imagens para o slideshow (Alteração 5)
+const slideshowImages = [
+  "/images/buscando3.png", // Imagem do "Seu pedido está pronto" (usando a mesma imagem para simular)
+  "/images/buscando2.png", 
+  "/images/buscando1.png",
+];
+
 export default function Tracking() {
+  // Função para mostrar o pop-up (Alteração 3)
+  const handleHelpClick = () => {
+    alert("Estamos chamando um atendente!");
+  };
+
   return (
     <div className="min-h-screen bg-white pb-24 font-sans">
       {/* Header */}
@@ -27,43 +40,12 @@ export default function Tracking() {
           Seu McDonald's está<br />aguardando você!
         </h1>
         
-        {/* Status Card */}
-        <div className="bg-gray-50 rounded-2xl p-6 mb-6 shadow-sm">
-          <div className="flex items-start gap-3 mb-6">
-            <MapPin size={24} className="text-[#DA291C] fill-[#DA291C] mt-1" />
-            <div>
-              <h2 className="text-lg font-bold text-black mb-2">Seu pedido está pronto!</h2>
-              <div className="flex items-start gap-2">
-                <MapPin size={14} className="text-gray-400 mt-0.5" />
-                <div>
-                  <p className="text-xs font-bold text-gray-600 uppercase">AV. PAULISTA, 1811</p>
-                  <p className="text-xs text-gray-400">Bela Vista . São Paulo . SP</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Progress Bar */}
-          <div className="relative px-2 mb-2">
-            <div className="h-0.5 w-full bg-gray-200 absolute top-1.5 left-0 z-0"></div>
-            <div className="h-0.5 w-full bg-[#DA291C] absolute top-1.5 left-0 z-0"></div>
-            
-            <div className="flex justify-between relative z-10">
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#DA291C]"></div>
-                <span className="text-[10px] text-gray-500 font-medium">Confirmado</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#DA291C]"></div>
-                <span className="text-[10px] text-gray-500 font-medium">Fazendo</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-white border-2 border-[#DA291C]"></div>
-                <span className="text-[10px] text-black font-bold">Pronto</span>
-              </div>
-            </div>
-          </div>
+        {/* Slideshow (Nova Posição - Substituindo o Status Card) */}
+        <div className="mb-6">
+          <Slideshow images={slideshowImages} interval={3000} />
         </div>
+
+        {/* Status Card (Removido, substituído pelo Slideshow) */}
         
         {/* Locker Info with QR Code */}
         <div className="bg-gray-50 rounded-2xl p-8 mb-6 flex items-center justify-between gap-6 shadow-sm">
@@ -87,7 +69,13 @@ export default function Tracking() {
           </ul>
           
           <div className="mt-6 pt-4 border-t border-gray-100 text-center">
-            <span className="text-xs text-gray-400 font-medium">Precisa de ajuda?</span>
+            {/* Botão de Ajuda com Pop-up (Alteração 3) */}
+            <button 
+              onClick={handleHelpClick}
+              className="text-xs text-gray-400 font-medium underline hover:text-gray-600 transition-colors"
+            >
+              Precisa de ajuda?
+            </button>
           </div>
         </div>
       </div>
